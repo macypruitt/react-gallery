@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import GalleryItem from '../GalleryItem/GalleryItem';
+import './GalleryList.css'
 
 class GalleryList extends Component {
     render(){
@@ -12,14 +13,12 @@ class GalleryList extends Component {
                     path={item.path}
                     description={item.description}
                     likes={item.likes}
-                
                 />
-                
             )
         });
 
         return (
-        <div>
+        <div className="listBox">
            {galleryList}
 
         </div>

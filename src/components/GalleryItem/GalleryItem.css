@@ -1,0 +1,14 @@
+div {
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 150px;
+   
+}
+
+.itemBox {
+    border: solid salmon;
+}
+
+img {
+    width: 100px;
+}
