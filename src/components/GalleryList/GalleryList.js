@@ -18,7 +18,7 @@ class GalleryList extends Component {
         });
 
         return (
-        <div className="listBox">
+        <div className="listBox d-flex">
            {galleryList}
 
         </div>

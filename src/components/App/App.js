@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
+import './bootstrap.min.css'
+
 
 class App extends Component {
   state= {
@@ -29,15 +31,12 @@ class App extends Component {
       alert('You can do it!!!');
     });
   }
-
-
-
-
-
+  
   render() {
 
     
     return (
+      <div className="container">
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
@@ -47,6 +46,7 @@ class App extends Component {
                     getGalleryCallback={this.getGallery}
         />
       
+      </div>
       </div>
     );
   }
