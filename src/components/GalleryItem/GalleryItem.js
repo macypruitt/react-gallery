@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './GalleryItem.css';
+import { noConflict } from 'q';
 
 
 class GalleryItem extends Component {
     
+    state= {
+      imageVisible: true,
+    }
+
+    clickShowDescription = (event) => {
+      if(this.state.imageVisible == true){
+
+      }
+
+
+    }
+
     // putLike = (likeId) => {
     //     axios({
     //       method: 'PUT',
@@ -24,6 +37,7 @@ class GalleryItem extends Component {
 
 
       likeHandler = (id) => {
+        
 
       }
 
