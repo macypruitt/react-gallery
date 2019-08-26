@@ -7,18 +7,20 @@ class GalleryList extends Component {
     render(){
         let galleryList = this.props.gallery.map((item, index) => {
             return (
-                <GalleryItem
-                    id={item.id}
-                    title={item.title}
-                    path={item.path}
-                    description={item.description}
-                    likes={item.likes}
-                />
+                <div className="listbox">
+                    <GalleryItem
+                        id={item.id}
+                        title={item.title}
+                        path={item.path}
+                        description={item.description}
+                        likes={item.likes}
+                    />
+                </div>
             )
         });
 
         return (
-        <div className="listBox d-flex">
+        <div className="container row">
            {galleryList}
 
         </div>

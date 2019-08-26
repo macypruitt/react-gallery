@@ -1,7 +1,5 @@
-.listBox {
-    display: grid;
-    background: black;
-    width: 800px;
-    margin: auto;
-    align-text: center;
+
+
+.container {
+   background-color: lightgoldenrodyellow
 }
