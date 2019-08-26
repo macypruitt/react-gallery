@@ -34,21 +34,18 @@ class App extends Component {
   
   render() {
 
-  
     return (
-      <div>
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
-        </header>
-        <br/>
-        
-        <GalleryList gallery={this.state.gallery}
-                    getGalleryCallback={this.getGallery}
-        />
       
+        <div className="container ">
+          <div className="App">
+          <header className="App-header">
+            <h1 className="App-title">Gallery of my life</h1>
+          </header>
+          <br/>
+          <GalleryList gallery={this.state.gallery}/>
+        </div>
       </div>
-      </div>
+      
     );
   }
 }
