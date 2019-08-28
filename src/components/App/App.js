@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './bootstrap.min.css'
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import './bootstrap.min.css'
 
 
 class App extends Component {
@@ -11,7 +11,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-    console.log('a mounted to nothing');
     this.getGallery();
   }
 
@@ -28,21 +27,34 @@ class App extends Component {
     })
     .catch((err) => {
       console.log('GET error: ', err);
-      alert('You can do it!!!');
+    });
+  }
+
+  putGallery = (event) => {
+    const id = event.target.dataset.id;
+    console.log(id)
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${id}`,
+    })
+    .then((response) => {
+      console.log(response);
+      this.getGallery();
+    })
+    .catch((err) => {
+      console.log('GET error: ', err);
     });
   }
   
   render() {
-
     return (
-      
         <div className="container ">
           <div className="App">
           <header className="App-header">
             <h1 className="App-title">Gallery of my life</h1>
           </header>
           <br/>
-          <GalleryList gallery={this.state.gallery}/>
+          <GalleryList gallery={this.state.gallery} putGallery={this.putGallery}/>
         </div>
       </div>
       

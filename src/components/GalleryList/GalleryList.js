@@ -4,9 +4,9 @@ import './GalleryList.css'
 
 class GalleryList extends Component {
 
-
     render(){
         let galleryList = this.props.gallery.map((item, index) => {
+        
             return (
                 <div key={item.id}>
                     <GalleryItem 
@@ -15,7 +15,7 @@ class GalleryList extends Component {
                         path={item.path}
                         description={item.description}
                         likes={item.likes}
-                    />
+                        putGallery={this.props.putGallery} />
                 </div>
             )
         });
@@ -23,9 +23,9 @@ class GalleryList extends Component {
         return (
         <div className="container row">
            {galleryList}
-
         </div>
         )
-        }}
+    }
+}
 
 export default GalleryList;
