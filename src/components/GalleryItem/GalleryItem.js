@@ -19,9 +19,7 @@ class GalleryItem extends Component {
         })
       }
     }
-
-
-        
+    
     render() {
         let imgPath = this.props.path;
         let imageBox = <img src={'..'+ imgPath} alt="pix"/>
@@ -32,11 +30,15 @@ class GalleryItem extends Component {
       
         return (
           <div className="card">
-              <div className="imageBox" onClick={this.clickToggleDescription}>{imageBox}</div>
-              <p>{this.props.title}</p>
-              <p>Likes: {this.props.likes}</p>
-              <button data-id={this.props.id} className="btn btn-primary" onClick={this.props.putGallery} >Like</button>
-          </div>
+              <div className="card-img-top" onClick={this.clickToggleDescription}>{imageBox}</div>
+                  <div class="card-body">
+                    <div className="card-text">
+                      <p>{this.props.title}</p>
+                      <p>Likes: {this.props.likes}</p>
+                    <button data-id={this.props.id} className="btn btn-primary" onClick={this.props.putGallery} >Like</button>
+                  </div>
+              </div>
+        </div>
         )
     }
 }

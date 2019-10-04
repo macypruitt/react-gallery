@@ -8,7 +8,7 @@ class GalleryList extends Component {
         let galleryList = this.props.gallery.map((item, index) => {
         
             return (
-                <div key={item.id}>
+                <div className="card-wrapper" key={item.id}>
                     <GalleryItem 
                         id={item.id}
                         title={item.title}
@@ -21,8 +21,10 @@ class GalleryList extends Component {
         });
 
         return (
-        <div className="container row">
+        <div className="container">
+            <div className="row justify-content-center">
            {galleryList}
+           </div>
         </div>
         )
     }
