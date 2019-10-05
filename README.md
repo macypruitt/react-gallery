@@ -1,6 +1,10 @@
 # Gallery of My Life
 
-This website is a mobile-first photo gallery. When the user clicks on the image, it's replaced with the description. Like button updates like count in real-time. Built with React and styled with Bootstrap.
+This responsive mobile-first site displays cards on a grid that collapses using breakpoints.
+
+ The cards hold a photo that can be clicked to reveal a description. Like buttons update counter.
+
+Built in React and styled with Bootstrap and CSS. Node server running Express with GET and POST routes.
 
 ## Installation
 
